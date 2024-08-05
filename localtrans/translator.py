@@ -1,3 +1,4 @@
+import json
 import re
 
 from localtrans.configuration import EXTENSION
@@ -8,6 +9,7 @@ from localtrans.models.pytranslator import PytFile
 import os
 from pathlib import Path
 import glob
+import tempfile
 
 
 class Translate:
@@ -124,3 +126,7 @@ class Translate:
             return None
 
         return dictionary[text]
+
+    def to_json(self, lang: str, delimiter: str = '='):
+        dictionary = self.__process_file(lang_name=lang, delimiter=delimiter)
+        return dictionary

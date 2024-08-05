@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "localtrans"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Oğuz Yeşil <oguzyesil17@gmail.com>"]
 readme = "README.md"
